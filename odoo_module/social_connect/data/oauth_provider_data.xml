@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!--
+        Pre-configured OAuth2 provider for the Social Connect mobile app.
+        After install, go to:
+          Settings → Technical → OAuth → Providers → Social Connect Mobile App
+        and fill in:
+          - Client ID     → copy to src/constants/index.ts  OAUTH2_CLIENT_ID
+          - Client Secret → copy to src/constants/index.ts  OAUTH2_CLIENT_SECRET
+    -->
+    <record id="oauth_provider_social_connect" model="auth.oauth.provider">
+        <field name="name">Social Connect Mobile App</field>
+        <field name="client_id">REPLACE_WITH_YOUR_CLIENT_ID</field>
+        <field name="auth_endpoint">/oauth2/authorize</field>
+        <field name="scope">openid profile email social_connect</field>
+        <field name="validation_endpoint">/oauth2/userinfo</field>
+        <field name="data_endpoint">/oauth2/userinfo</field>
+        <field name="enabled" eval="True"/>
+        <field name="css_class">btn-social</field>
+        <field name="body">Sign in with Odoo</field>
+        <field name="sequence">10</field>
+    </record>
+</odoo>

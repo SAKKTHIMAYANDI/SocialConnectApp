@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── social.profile list view ── -->
+    <record id="view_social_profile_list" model="ir.ui.view">
+        <field name="name">social.profile.list</field>
+        <field name="model">social.profile</field>
+        <field name="arch" type="xml">
+            <list string="Social Profiles">
+                <field name="partner_id"/>
+                <field name="platform"/>
+                <field name="found"  widget="boolean_toggle"/>
+                <field name="handle"/>
+                <field name="lookup_source"/>
+                <field name="last_lookup"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── social.profile form view ── -->
+    <record id="view_social_profile_form" model="ir.ui.view">
+        <field name="name">social.profile.form</field>
+        <field name="model">social.profile</field>
+        <field name="arch" type="xml">
+            <form string="Social Profile">
+                <sheet>
+                    <group>
+                        <group string="Identity">
+                            <field name="partner_id"/>
+                            <field name="platform"/>
+                            <field name="found" widget="boolean_toggle"/>
+                        </group>
+                        <group string="Profile Details">
+                            <field name="handle"/>
+                            <field name="profile_url" widget="url"/>
+                            <field name="profile_name"/>
+                            <field name="last_seen"/>
+                        </group>
+                    </group>
+                    <group string="Lookup Info">
+                        <field name="lookup_source"/>
+                        <field name="last_lookup"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Action ── -->
+    <record id="action_social_profiles" model="ir.actions.act_window">
+        <field name="name">Social Profiles</field>
+        <field name="res_model">social.profile</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ── Menu ── -->
+    <menuitem id="menu_social_connect_root"
+              name="Social Connect"
+              sequence="90"/>
+    <menuitem id="menu_social_profiles"
+              name="Social Profiles"
+              parent="menu_social_connect_root"
+              action="action_social_profiles"
+              sequence="10"/>
+
+</odoo>

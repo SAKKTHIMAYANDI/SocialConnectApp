@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_social_profile_user,social.profile user,model_social_profile,base.group_user,1,1,1,0
+access_social_profile_portal,social.profile portal,model_social_profile,base.group_portal,1,0,0,0
+access_social_profile_manager,social.profile manager,model_social_profile,base.group_system,1,1,1,1

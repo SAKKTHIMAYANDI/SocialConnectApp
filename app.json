@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "SocialConnect",
+    "slug": "social-connect-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "socialconnect",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourcompany.socialconnect",
+      "infoPlist": {
+        "NSAppTransportSecurity": { "NSAllowsArbitraryLoads": true }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0a0f"
+      },
+      "package": "com.yourcompany.socialconnect",
+      "permissions": ["INTERNET", "ACCESS_NETWORK_STATE"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser"
+    ]
+  }
+}

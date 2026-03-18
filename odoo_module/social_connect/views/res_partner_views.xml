@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend res.partner form with Social Connect tab -->
+    <record id="view_partner_form_social_connect" model="ir.ui.view">
+        <field name="name">res.partner.form.social.connect</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Social Connect" name="social_connect">
+                    <group>
+                        <group string="Mobile App">
+                            <field name="app_user" widget="boolean_toggle"/>
+                            <field name="app_registered_at" readonly="1"/>
+                            <field name="mobile_verified" widget="boolean_toggle"/>
+                            <field name="email_verified"  widget="boolean_toggle"/>
+                        </group>
+                        <group string="Summary">
+                            <field name="social_profiles_count" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="social_profile_ids" nolabel="1">
+                        <list editable="bottom">
+                            <field name="platform"/>
+                            <field name="found" widget="boolean_toggle"/>
+                            <field name="handle"/>
+                            <field name="profile_url" widget="url"/>
+                            <field name="last_lookup" readonly="1"/>
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
