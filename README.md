@@ -101,7 +101,9 @@ sudo apt update
 sudo apt install nodejs npm -y
 
 # Install dependencies
+rm -rf node_modules package-lock.json
 npm install
+npx expo start -c
 
 # Start Expo
 npx expo start

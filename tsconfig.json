@@ -5,10 +5,14 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-native",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "skipLibCheck": true,
     "resolveJsonModule": true,
@@ -16,6 +20,13 @@
     "esModuleInterop": true,
     "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "odoo_module"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "odoo_module"
+  ],
+  "extends": "expo/tsconfig.base"
 }
