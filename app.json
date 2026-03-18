@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "scheme": "socialconnect",
+    "platforms": ["ios", "android"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yourcompany.socialconnect",
